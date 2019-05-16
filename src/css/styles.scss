@@ -1,5 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('./../fonts/billyfont/css/style.css');
+
 $colors: (
     brand: #8AACDF,
     font: #707070,
-    font-alt: #fff
+    font-alt: #fff,
+    myred: #E58383,
+    mygreen: #62AC7B
 );
+
+@function color($name) {  
+    @return map-get($map: $colors, $key: $name); 
+};
+
+body {
+    height: 100%;
+    color: color(font);
+    font-family: 'Ubuntu', sans-serif;
+
+    div {
+        border-width: 0px;
+    }
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 489px;
+    width: 100%;    
+    background-color: color(brand);   
+    -webkit-clip-path: polygon(28% 0, 100% 0, 100% 100%, 62.5% 100%);
+    clip-path: polygon(28% 0, 100% 0, 100% 100%, 62.5% 100%);
+    z-index: -1000;
+}
+
+.content {
+    margin-top: 74px;
+    margin-left: 200px;
+    margin-right: 200px;
+
+
+    .detail-content {
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        .my-details {
+            flex: 1;
+            margin-top: 180px;
+    
+            h1 {
+                margin: 0;
+                padding: 0;
+                font-size: 62px;
+            }
+            .tagline {
+                display: inline-block;
+                word-wrap: break-word;
+                width: 350px;
+                font-size: 22px;
+    
+                .red {
+                    color: color(myred);
+                }
+                .green {
+                    color: color(mygreen);
+                }
+            }
+            div.additional {
+                margin-top: 10px;
+                div.additional-info {
+                    font-size: 14px;
+    
+                    i {
+                        width: 15px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .my-photo {
+            flex: 1;
+
+            img {
+                height: 580px;
+            }
+        }
+    }
+
+    .social-media-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+        padding: 0 50px 0 50px;
+        height: 102px;
+        margin-top: -3px;
+        background-color: color(brand);
+        border-width: 0px;
+        border-radius: 77px;
+        color: color(font-alt);
+
+        a {
+            display: inline-block;
+            justify-content: center;
+            color: color(font-alt);
+            flex: 1;
+            font-size: 50px;
+            text-align: center;
+        }
+        a:hover {
+            color: color(font);
+        }
+    }
+}
