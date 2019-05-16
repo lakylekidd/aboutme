@@ -1,0 +1,68 @@
+/*------------------------
+	icons
+-------------------------*/
+@function unicode($str) {
+  @return unquote("\"\\#{$str}\"");
+}
+
+$bf-github: unicode(ea02);
+$bf-twitter: unicode(ea03);
+$bf-linkedin: unicode(ea04);
+$bf-facebook: unicode(ea05);
+$bf-instagram: unicode(ea06);
+$bf-world: unicode(ea07);
+$bf-code: unicode(ea08);
+$bf-music: unicode(ea09);
+$bf-quote-left: unicode(ea0a);
+$bf-quote-right: unicode(ea0b);
+$bf-location: unicode(ea0c);
+$bf-birthday: unicode(ea0d);
+
+.bf-github::before {
+  content: $bf-github;
+}
+
+.bf-twitter::before {
+  content: $bf-twitter;
+}
+
+.bf-linkedin::before {
+  content: $bf-linkedin;
+}
+
+.bf-facebook::before {
+  content: $bf-facebook;
+}
+
+.bf-instagram::before {
+  content: $bf-instagram;
+}
+
+.bf-world::before {
+  content: $bf-world;
+}
+
+.bf-code::before {
+  content: $bf-code;
+}
+
+.bf-music::before {
+  content: $bf-music;
+}
+
+.bf-quote-left::before {
+  content: $bf-quote-left;
+}
+
+.bf-quote-right::before {
+  content: $bf-quote-right;
+}
+
+.bf-location::before {
+  content: $bf-location;
+}
+
+.bf-birthday::before {
+  content: $bf-birthday;
+}
+
