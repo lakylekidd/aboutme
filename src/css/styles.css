@@ -151,6 +151,12 @@ body div {
   height: 800px;
 }
 
+@media (max-height: 800px) {
+  .content .detail-content .my-photo img {
+    height: 690px;
+  }
+}
+
 @media (max-width: 740px) {
   .content .detail-content .my-photo img {
     height: 650px;
@@ -245,7 +251,11 @@ body div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
   height: 380px;
+  width: 100%;
   z-index: -1000;
 }
 
@@ -269,7 +279,13 @@ body div {
 
 .content .about-me-header div.about-me-back .right {
   margin-left: -1px;
-  width: 850px;
+  width: 80%;
+}
+
+@media (max-width: 740px) {
+  .content .about-me-header div.about-me-back .right {
+    width: 100%;
+  }
 }
 
 @media (max-width: 740px) {

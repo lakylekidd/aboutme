@@ -2,6 +2,7 @@
 @import url('./../fonts/billyfont/css/style.css');
 
 $mobile: 740px;
+$web-height: 800px;
 $mobile-height-738: 738px;
 $mobile-height-670: 670px;
 $colors: (
@@ -17,6 +18,11 @@ $colors: (
 };
 
 // Define Mixins
+@mixin web-height {
+    @media (max-height: #{$web-height}) {
+        @content;
+    }
+}
 @mixin mobile {
     @media (max-width: #{$mobile}) {
         @content;
@@ -149,6 +155,9 @@ body {
 
             img {
                 height: 800px;
+                @include web-height() {
+                    height: 690px;
+                }
                 @include mobile {
                     height: 650px;
                 }
@@ -221,7 +230,9 @@ body {
             margin-top: 30px;
             right: 0;
             display: flex;
+            justify-content: right;
             height: 380px;
+            width: 100%;
             z-index: -1000;
 
             div {
@@ -240,7 +251,11 @@ body {
             }
             .right {
                 margin-left: -1px;
-                width: 850px;
+                width: 80%;
+
+                @include mobile {
+                    width: 100%;
+                }
             }
 
             @include mobile {
