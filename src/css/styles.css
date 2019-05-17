@@ -28,6 +28,10 @@ body div {
   margin-right: 200px;
 }
 
+.content section {
+  height: 780px;
+}
+
 .content .detail-content {
   margin: 0;
   padding: 0;
@@ -122,5 +126,109 @@ body div {
 
 .content .social-media-content a:hover {
   color: #707070;
+}
+
+.content .about-me-header {
+  text-align: center;
+}
+
+.content .about-me-header h1 {
+  font-size: 25px;
+}
+
+.content .about-me-header p {
+  font-size: 22px;
+  font-style: italic;
+  margin-top: 37px;
+  line-height: 40px;
+}
+
+.content .about-me-header p i.bf {
+  font-size: 30px;
+  margin: 0 10px 0 10px;
+}
+
+.content .about-me-header div.about-me-back {
+  position: absolute;
+  margin-top: 30px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 380px;
+  z-index: -1000;
+}
+
+.content .about-me-header div.about-me-back div {
+  background-color: #8AACDF;
+  padding: 0;
+  margin: 0;
+}
+
+.content .about-me-header div.about-me-back .left {
+  width: 380px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.content .about-me-header div.about-me-back .right {
+  margin-left: -1px;
+  width: 850px;
+}
+
+.content .about-me-header div.my-likes {
+  text-align: left;
+  margin-top: 80px;
+  color: #fff;
+}
+
+.content .about-me-header div.my-likes h1 {
+  font-size: 22px;
+}
+
+.content .about-me-header div.my-likes div.likes-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .about-me-header div.my-likes div.likes-content .likes-item {
+  width: 225px;
+}
+
+.content .about-me-header div.my-likes div.likes-content .likes-item h2 {
+  font-size: 22px;
+  margin: 0 0 5px 0;
+}
+
+.content .about-me-header div.my-likes div.likes-content .likes-item h2 i.bf {
+  font-size: 40px;
+  margin-right: 4px;
+}
+
+.content .about-me-header div.my-likes div.likes-content .likes-item p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 20px;
+}
+
+.content .about-me-header div.my-likes div.likes-content .likes-item q {
+  margin-top: 8px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.content .about-me-header div.my-likes div.likes-content .likes-item span.author {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: right;
 }
 /*# sourceMappingURL=styles.css.map */

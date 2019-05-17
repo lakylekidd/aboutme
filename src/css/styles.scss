@@ -40,6 +40,9 @@ body {
     margin-left: 200px;
     margin-right: 200px;
 
+    section {
+        height: 780px;
+    }
 
     .detail-content {
         margin: 0;
@@ -113,6 +116,101 @@ body {
         }
         a:hover {
             color: color(font);
+        }
+    }
+
+    .about-me-header {
+        text-align: center;
+
+        h1 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 22px;
+            font-style: italic;
+            margin-top: 37px;
+            line-height: 40px;
+
+            i.bf {
+                font-size: 30px;
+                margin: 0 10px 0 10px;
+            }
+        }
+
+        div.about-me-back {
+            position: absolute;
+            margin-top: 30px;
+            right: 0;
+            display: flex;
+            height: 380px;
+            z-index: -1000;
+
+            div {
+                background-color: color(brand);
+                padding: 0;
+                margin: 0;
+            }
+            .left {
+                width: 380px;
+                border-top-left-radius: 50%;
+                border-bottom-left-radius: 50%;
+            }
+            .right {
+                margin-left: -1px;
+                width: 850px;
+            }
+        }
+
+        div.my-likes {
+            text-align: left;
+            margin-top: 80px;
+            color: color(font-alt);
+
+            h1 {
+                font-size: 22px;
+            }
+
+            div.likes-content {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .likes-item {
+                    width: 225px;
+
+                    h2 {
+                        font-size: 22px;
+                        margin: 0 0 5px 0;
+                        i.bf {
+                            font-size: 40px;
+                            margin-right: 4px;
+                        }
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        margin-bottom: 5px;
+                        font-size: 14px;
+                        font-style: normal;
+                        line-height: 20px;
+                    }
+
+                    q {
+                        margin-top: 8px;
+                        font-size: 12px;
+                        font-style: italic;
+                    }
+
+                    span.author {
+                        display: block;
+                        margin-top: 2px;
+                        font-size: 12px;
+                        font-weight: 400;
+                        text-align: right;
+                    }
+                }
+            }
         }
     }
 }
