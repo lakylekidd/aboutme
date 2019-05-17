@@ -1,4 +1,6 @@
-# aboutme
+![alt text](https://raw.githubusercontent.com/lakylekidd/aboutme/master/media/Capture.PNG)
+
+# About Me
 This is the about me web site assigned to me by Codaisseur Academy before my training, as a means to introduce myself to my classmates.
 
 ## Technologies Used
@@ -14,3 +16,6 @@ will be implemented the same way
 ## Deployment
 The deployment process used is based on Azure DevOps using standard CI. As soon as a release is published to the master branch
 AzureDev ops CI is triggered automatically to copy the files to Azure using FTPS.
+
+## Website
+The website is published under [this link](https://billyvlachos.azurewebsites.net/ "this link").
