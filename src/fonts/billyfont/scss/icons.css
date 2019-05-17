@@ -1,0 +1,51 @@
+/*------------------------
+	icons
+-------------------------*/
+.bf-github::before {
+  content: "\ea02";
+}
+
+.bf-twitter::before {
+  content: "\ea03";
+}
+
+.bf-linkedin::before {
+  content: "\ea04";
+}
+
+.bf-facebook::before {
+  content: "\ea05";
+}
+
+.bf-instagram::before {
+  content: "\ea06";
+}
+
+.bf-world::before {
+  content: "\ea07";
+}
+
+.bf-code::before {
+  content: "\ea08";
+}
+
+.bf-music::before {
+  content: "\ea09";
+}
+
+.bf-quote-left::before {
+  content: "\ea0a";
+}
+
+.bf-quote-right::before {
+  content: "\ea0b";
+}
+
+.bf-location::before {
+  content: "\ea0c";
+}
+
+.bf-birthday::before {
+  content: "\ea0d";
+}
+/*# sourceMappingURL=icons.css.map */

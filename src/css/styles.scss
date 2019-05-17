@@ -1,5 +1,325 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('./../fonts/billyfont/css/style.css');
+
+$mobile: 740px;
+$web-height: 800px;
+$mobile-height-738: 738px;
+$mobile-height-670: 670px;
 $colors: (
     brand: #8AACDF,
-    font: #707070,
-    font-alt: #fff
+    font: #282961,
+    font-alt: #fff,
+    myred: #E58383,
+    mygreen: #62AC7B
 );
+
+@function color($name) {  
+    @return map-get($map: $colors, $key: $name); 
+};
+
+// Define Mixins
+@mixin web-height {
+    @media (max-height: #{$web-height}) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+@mixin mobile-height-738 {
+    @media (max-height: #{$mobile-height-738}) {
+        @content;
+    }
+}
+@mixin mobile-height-670 {
+    @media (max-height: #{$mobile-height-670}) {
+        @content;
+    }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: color(font);
+    font-family: 'Ubuntu', sans-serif;
+
+    div {
+        border-width: 0px;
+    }
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 489px;
+    width: 100%;    
+    background-color: color(brand);   
+    -webkit-clip-path: polygon(28% 0, 100% 0, 100% 100%, 62.5% 100%);
+    clip-path: polygon(28% 0, 100% 0, 100% 100%, 62.5% 100%);
+    z-index: -1000;
+
+    @include mobile {
+        height: 300px;
+    }
+}
+
+.content {
+    margin-top: 0px;
+    padding: 0;
+    max-width: 880px;
+    margin: 0 auto;
+
+    @include mobile {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    section {
+        height: 940px;
+        margin: 0;
+        padding: 0;
+
+        @include mobile {
+            height: 812px;
+        }
+    }
+
+    .detail-content {
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        .my-details {
+            flex: 1;
+            margin-top: 180px;
+
+            @include mobile {
+                margin-top: 0;
+            }
+    
+            h1 {
+                margin: 0;
+                padding: 0;
+                font-size: 62px;
+
+                @include mobile {
+                    font-size: 32px;
+                    margin-top: 10px;
+                }
+            }
+            .tagline {
+                display: inline-block;
+                word-wrap: break-word;
+                width: 350px;
+                font-size: 22px;
+    
+                .red {
+                    color: color(myred);
+                }
+                .green {
+                    color: color(mygreen);
+                }
+
+                @include mobile {
+                    font-size: 12px;   
+                    width: 230px;
+                }
+            }
+            div.additional {
+                margin-top: 10px;
+
+                div.additional-info {
+                    font-size: 14px;
+    
+                    i {
+                        width: 15px;
+                        text-align: center;
+                    }
+
+                    @include mobile {
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+        .my-photo {
+            flex: 1;
+
+            img {
+                height: 800px;
+                @include web-height() {
+                    height: 690px;
+                }
+                @include mobile {
+                    height: 650px;
+                }
+                @include mobile-height-738 {
+                    height: 550px;
+                }
+                @include mobile-height-670 {
+                    height: 500px;
+                }
+            }
+        }
+    }
+
+    .social-media-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+        padding: 0 50px 0 50px;
+        height: 102px;
+        margin-top: -3px;
+        background-color: color(brand);
+        border-width: 0px;
+        border-radius: 77px;
+        color: color(font-alt);
+
+        a {
+            display: inline-block;
+            justify-content: center;
+            color: color(font-alt);
+            flex: 1;
+            font-size: 50px;
+            text-align: center;
+
+            @include mobile {
+                font-size: 22px;
+            }
+        }
+        a:hover {
+            color: color(font);
+        }
+
+        @include mobile {
+            height: 50px;     
+        }
+    }
+
+    .about-me-header {
+        text-align: center;
+
+        h1 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 22px;
+            font-style: italic;
+            margin-top: 37px;
+            line-height: 40px;
+
+            i.bf {
+                font-size: 30px;
+                margin: 0 10px 0 10px;
+            }
+        }
+
+        div.about-me-back {
+            position: absolute;
+            margin-top: 30px;
+            right: 0;
+            display: flex;
+            justify-content: right;
+            height: 380px;
+            width: 100%;
+            z-index: -1000;
+
+            div {
+                background-color: color(brand);
+                padding: 0;
+                margin: 0;
+            }
+            .left {
+                width: 380px;
+                border-top-left-radius: 50%;
+                border-bottom-left-radius: 50%;
+
+                @include mobile {
+                    display: none;
+                }
+            }
+            .right {
+                margin-left: -1px;
+                width: 80%;
+
+                @include mobile {
+                    width: 100%;
+                }
+            }
+
+            @include mobile {
+                height: 670px; 
+            }
+        }
+
+        div.my-likes {
+            text-align: left;
+            margin-top: 80px;
+            color: color(font-alt);
+
+            h1 {
+                font-size: 22px;
+            }
+
+            div.likes-content {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .likes-item {
+                    width: 225px;
+
+                    h2 {
+                        font-size: 22px;
+                        margin: 0 0 5px 0;
+                        i.bf {
+                            font-size: 40px;
+                            margin-right: 4px;
+                        }
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        margin-bottom: 5px;
+                        font-size: 14px;
+                        font-style: normal;
+                        line-height: 20px;
+                    }
+
+                    q {
+                        margin-top: 8px;
+                        font-size: 12px;
+                        font-style: italic;
+                    }
+
+                    span.author {
+                        display: block;
+                        margin-top: 2px;
+                        font-size: 12px;
+                        font-weight: 400;
+                        text-align: right;
+                    }
+
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

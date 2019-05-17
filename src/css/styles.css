@@ -1,1 +1,367 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+@import url("./../fonts/billyfont/css/style.css");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #282961;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html div,
+body div {
+  border-width: 0px;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 489px;
+  width: 100%;
+  background-color: #8AACDF;
+  -webkit-clip-path: polygon(28% 0, 100% 0, 100% 100%, 62.5% 100%);
+  clip-path: polygon(28% 0, 100% 0, 100% 100%, 62.5% 100%);
+  z-index: -1000;
+}
+
+@media (max-width: 740px) {
+  .back {
+    height: 300px;
+  }
+}
+
+.content {
+  margin-top: 0px;
+  padding: 0;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+@media (max-width: 740px) {
+  .content {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+}
+
+.content section {
+  height: 940px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 740px) {
+  .content section {
+    height: 812px;
+  }
+}
+
+.content .detail-content {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 740px) {
+  .content .detail-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.content .detail-content .my-details {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top: 180px;
+}
+
+@media (max-width: 740px) {
+  .content .detail-content .my-details {
+    margin-top: 0;
+  }
+}
+
+.content .detail-content .my-details h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 62px;
+}
+
+@media (max-width: 740px) {
+  .content .detail-content .my-details h1 {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+}
+
+.content .detail-content .my-details .tagline {
+  display: inline-block;
+  word-wrap: break-word;
+  width: 350px;
+  font-size: 22px;
+}
+
+.content .detail-content .my-details .tagline .red {
+  color: #E58383;
+}
+
+.content .detail-content .my-details .tagline .green {
+  color: #62AC7B;
+}
+
+@media (max-width: 740px) {
+  .content .detail-content .my-details .tagline {
+    font-size: 12px;
+    width: 230px;
+  }
+}
+
+.content .detail-content .my-details div.additional {
+  margin-top: 10px;
+}
+
+.content .detail-content .my-details div.additional div.additional-info {
+  font-size: 14px;
+}
+
+.content .detail-content .my-details div.additional div.additional-info i {
+  width: 15px;
+  text-align: center;
+}
+
+@media (max-width: 740px) {
+  .content .detail-content .my-details div.additional div.additional-info {
+    font-size: 11px;
+  }
+}
+
+.content .detail-content .my-photo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.content .detail-content .my-photo img {
+  height: 800px;
+}
+
+@media (max-height: 800px) {
+  .content .detail-content .my-photo img {
+    height: 690px;
+  }
+}
+
+@media (max-width: 740px) {
+  .content .detail-content .my-photo img {
+    height: 650px;
+  }
+}
+
+@media (max-height: 738px) {
+  .content .detail-content .my-photo img {
+    height: 550px;
+  }
+}
+
+@media (max-height: 670px) {
+  .content .detail-content .my-photo img {
+    height: 500px;
+  }
+}
+
+.content .social-media-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0 50px 0 50px;
+  height: 102px;
+  margin-top: -3px;
+  background-color: #8AACDF;
+  border-width: 0px;
+  border-radius: 77px;
+  color: #fff;
+}
+
+.content .social-media-content a {
+  display: inline-block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 50px;
+  text-align: center;
+}
+
+@media (max-width: 740px) {
+  .content .social-media-content a {
+    font-size: 22px;
+  }
+}
+
+.content .social-media-content a:hover {
+  color: #282961;
+}
+
+@media (max-width: 740px) {
+  .content .social-media-content {
+    height: 50px;
+  }
+}
+
+.content .about-me-header {
+  text-align: center;
+}
+
+.content .about-me-header h1 {
+  font-size: 25px;
+}
+
+.content .about-me-header p {
+  font-size: 22px;
+  font-style: italic;
+  margin-top: 37px;
+  line-height: 40px;
+}
+
+.content .about-me-header p i.bf {
+  font-size: 30px;
+  margin: 0 10px 0 10px;
+}
+
+.content .about-me-header div.about-me-back {
+  position: absolute;
+  margin-top: 30px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  height: 380px;
+  width: 100%;
+  z-index: -1000;
+}
+
+.content .about-me-header div.about-me-back div {
+  background-color: #8AACDF;
+  padding: 0;
+  margin: 0;
+}
+
+.content .about-me-header div.about-me-back .left {
+  width: 380px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+@media (max-width: 740px) {
+  .content .about-me-header div.about-me-back .left {
+    display: none;
+  }
+}
+
+.content .about-me-header div.about-me-back .right {
+  margin-left: -1px;
+  width: 80%;
+}
+
+@media (max-width: 740px) {
+  .content .about-me-header div.about-me-back .right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 740px) {
+  .content .about-me-header div.about-me-back {
+    height: 670px;
+  }
+}
+
+.content .about-me-header div.my-likes {
+  text-align: left;
+  margin-top: 80px;
+  color: #fff;
+}
+
+.content .about-me-header div.my-likes h1 {
+  font-size: 22px;
+}
+
+.content .about-me-header div.my-likes div.likes-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .about-me-header div.my-likes div.likes-content .likes-item {
+  width: 225px;
+}
+
+.content .about-me-header div.my-likes div.likes-content .likes-item h2 {
+  font-size: 22px;
+  margin: 0 0 5px 0;
+}
+
+.content .about-me-header div.my-likes div.likes-content .likes-item h2 i.bf {
+  font-size: 40px;
+  margin-right: 4px;
+}
+
+.content .about-me-header div.my-likes div.likes-content .likes-item p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 20px;
+}
+
+.content .about-me-header div.my-likes div.likes-content .likes-item q {
+  margin-top: 8px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.content .about-me-header div.my-likes div.likes-content .likes-item span.author {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: right;
+}
+
+@media (max-width: 740px) {
+  .content .about-me-header div.my-likes div.likes-content .likes-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 740px) {
+  .content .about-me-header div.my-likes div.likes-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
