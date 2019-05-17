@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('./../fonts/billyfont/css/style.css');
 
+$mobile: 740px;
+$mobile-height-738: 738px;
+$mobile-height-670: 670px;
 $colors: (
     brand: #8AACDF,
-    font: #707070,
+    font: #282961,
     font-alt: #fff,
     myred: #E58383,
     mygreen: #62AC7B
@@ -13,8 +16,27 @@ $colors: (
     @return map-get($map: $colors, $key: $name); 
 };
 
+// Define Mixins
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+@mixin mobile-height-738 {
+    @media (max-height: #{$mobile-height-738}) {
+        @content;
+    }
+}
+@mixin mobile-height-670 {
+    @media (max-height: #{$mobile-height-670}) {
+        @content;
+    }
+}
+
+html,
 body {
-    height: 100%;
+    margin: 0;
+    padding: 0;
     color: color(font);
     font-family: 'Ubuntu', sans-serif;
 
@@ -33,15 +55,31 @@ body {
     -webkit-clip-path: polygon(28% 0, 100% 0, 100% 100%, 62.5% 100%);
     clip-path: polygon(28% 0, 100% 0, 100% 100%, 62.5% 100%);
     z-index: -1000;
+
+    @include mobile {
+        height: 300px;
+    }
 }
 
 .content {
-    margin-top: 74px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-top: 0px;
+    padding: 0;
+    max-width: 880px;
+    margin: 0 auto;
+
+    @include mobile {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
 
     section {
-        height: 780px;
+        height: 940px;
+        margin: 0;
+        padding: 0;
+
+        @include mobile {
+            height: 812px;
+        }
     }
 
     .detail-content {
@@ -49,14 +87,27 @@ body {
         padding: 0;
         display: flex;
 
+        @include mobile {
+            flex-direction: column;
+        }
+
         .my-details {
             flex: 1;
             margin-top: 180px;
+
+            @include mobile {
+                margin-top: 0;
+            }
     
             h1 {
                 margin: 0;
                 padding: 0;
                 font-size: 62px;
+
+                @include mobile {
+                    font-size: 32px;
+                    margin-top: 10px;
+                }
             }
             .tagline {
                 display: inline-block;
@@ -70,15 +121,25 @@ body {
                 .green {
                     color: color(mygreen);
                 }
+
+                @include mobile {
+                    font-size: 11px;   
+                    width: 230px;
+                }
             }
             div.additional {
                 margin-top: 10px;
+
                 div.additional-info {
                     font-size: 14px;
     
                     i {
                         width: 15px;
                         text-align: center;
+                    }
+
+                    @include mobile {
+                        font-size: 11px;
                     }
                 }
             }
@@ -87,7 +148,16 @@ body {
             flex: 1;
 
             img {
-                height: 580px;
+                height: 800px;
+                @include mobile {
+                    height: 650px;
+                }
+                @include mobile-height-738 {
+                    height: 550px;
+                }
+                @include mobile-height-670 {
+                    height: 500px;
+                }
             }
         }
     }
@@ -113,9 +183,17 @@ body {
             flex: 1;
             font-size: 50px;
             text-align: center;
+
+            @include mobile {
+                font-size: 20px;
+            }
         }
         a:hover {
             color: color(font);
+        }
+
+        @include mobile {
+            height: 50px;     
         }
     }
 
@@ -155,10 +233,18 @@ body {
                 width: 380px;
                 border-top-left-radius: 50%;
                 border-bottom-left-radius: 50%;
+
+                @include mobile {
+                    display: none;
+                }
             }
             .right {
                 margin-left: -1px;
                 width: 850px;
+            }
+
+            @include mobile {
+                height: 670px; 
             }
         }
 
@@ -209,6 +295,14 @@ body {
                         font-weight: 400;
                         text-align: right;
                     }
+
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+
+                @include mobile {
+                    flex-direction: column;
                 }
             }
         }
