@@ -117,7 +117,7 @@ body div {
 
 @media (max-width: 740px) {
   .content .detail-content .my-details .tagline {
-    font-size: 11px;
+    font-size: 12px;
     width: 230px;
   }
 }
@@ -210,7 +210,7 @@ body div {
 
 @media (max-width: 740px) {
   .content .social-media-content a {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 

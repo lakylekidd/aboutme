@@ -129,7 +129,7 @@ body {
                 }
 
                 @include mobile {
-                    font-size: 11px;   
+                    font-size: 12px;   
                     width: 230px;
                 }
             }
@@ -194,7 +194,7 @@ body {
             text-align: center;
 
             @include mobile {
-                font-size: 20px;
+                font-size: 22px;
             }
         }
         a:hover {
